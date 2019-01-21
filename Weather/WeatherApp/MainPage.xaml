@@ -35,15 +35,15 @@
                 <Label Text="Location" x:Name="locationLabel" Style="{StaticResource labelStyle}" />
                 <Label Text="{Binding Title}" Style="{StaticResource labelResultStyle}" />
                 <Label Text="Temperature" x:Name="temperatureLabel" Style="{StaticResource labelStyle}" />
-                <Label Text="{Binding Main.Temperature}" Style="{StaticResource labelResultStyle}" />
+                <StackLayout Grid.Row="1" Orientation="Horizontal">
+                    <Label Text="{Binding Main.Temperature}" Style="{StaticResource labelResultStyle}" />
+                    <Label x:Name="tempMetImp" Text="" Style="{StaticResource labelResultStyle}" />
+                </StackLayout>
                 <Label Text="Wind Speed" x:Name="windSpeedLabel" Style="{StaticResource labelStyle}" />
-                   <StackLayout Grid.Row="1" Orientation="Horizontal">
-                <Label Text="{Binding Wind.Speed}" Style="{StaticResource labelResultStyle}" />
-                <Label x:Name="unitsMetImp" Text="" Style="{StaticResource labelResultStyle}" />
-             
-
-
-</StackLayout>
+                <StackLayout Grid.Row="1" Orientation="Horizontal">
+                    <Label Text="{Binding Wind.Speed}" Style="{StaticResource labelResultStyle}" />
+                    <Label x:Name="unitsMetImp" Text="" Style="{StaticResource labelResultStyle}" />
+                </StackLayout>
                 <Label Text="Humidity" x:Name="humidityLabel" Style="{StaticResource labelStyle}" />
                 <Label Text="{Binding Main.Humidity}" Style="{StaticResource labelResultStyle}" />
                 <Label Text="Visibility" x:Name="visibilityLabel" Style="{StaticResource labelStyle}" />
@@ -52,19 +52,13 @@
                 <Label Text="{Binding Sys.Sunrise, Converter={StaticResource longToDateTimeConverter}}" Style="{StaticResource labelResultStyle}" />
                 <Label Text="Time of Sunset" x:Name="timeOfSunsetLabel" Style="{StaticResource labelStyle}" />
                 <Label Text="{Binding Sys.Sunset, Converter={StaticResource longToDateTimeConverter}}" Style="{StaticResource labelResultStyle}" />
-            
-                
-                    <Label x:Name="optLang" Text="Language ENG/PL" Style="{StaticResource labelStyle}"/>
-        <Switch HorizontalOptions="Start" Toggled="Handle_Toggled_Lang" />
-        <Label x:Name="optUnits" Text="Units Imperial/Metric" Style="{StaticResource labelStyle}" />
-        <Switch HorizontalOptions="Start" Toggled="Handle_Toggled_Units" />
-        <Label x:Name="optColor" Text="Theme Light/Dark" Style="{StaticResource labelStyle}"/>
-        <Switch HorizontalOptions="Start" Toggled="Handle_Toggled_Color"/>
-            
+                <Label x:Name="optLang" Text="Language ENG/PL" Style="{StaticResource labelStyle}" />
+                <Switch HorizontalOptions="Start" Toggled="Handle_Toggled_Lang" />
+                <Label x:Name="optUnits" Text="Units Imperial/Metric" Style="{StaticResource labelStyle}" />
+                <Switch HorizontalOptions="Start" Toggled="Handle_Toggled_UnitsAsync" />
+                <Label x:Name="optColor" Text="Theme Light/Dark" Style="{StaticResource labelStyle}" />
+                <Switch HorizontalOptions="Start" Toggled="Handle_Toggled_Color" />
             </StackLayout>
         </ScrollView>
-        
-        
-        
     </StackLayout>
 </ContentPage>

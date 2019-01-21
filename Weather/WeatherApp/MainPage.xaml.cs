@@ -27,6 +27,32 @@ namespace WeatherApp
             }
         }
 
+        async void Handle_Toggled_UnitsAsync(object sender, Xamarin.Forms.ToggledEventArgs e)
+        {
+
+            metricValues = e.Value;
+
+            if (metricValues == true)
+            {
+                unitsValue = "metric";
+                unitsMetImp.Text = "m/s";
+                tempMetImp.Text = "C";
+            }
+            else
+            {
+                unitsValue = "imperial";
+                unitsMetImp.Text = "mph";
+                tempMetImp.Text = "F";
+            }
+
+
+            if (!string.IsNullOrWhiteSpace(_cityEntry.Text))
+            {
+                WeatherData weatherData = await _restService.GetWeatherData(GenerateRequestUri(Constants.OpenWeatherMapEndpoint));
+                BindingContext = weatherData;
+            }
+        }
+
         void Handle_Toggled_Lang(object sender, Xamarin.Forms.ToggledEventArgs e)
         {
             langPolish = e.Value;
@@ -64,23 +90,7 @@ namespace WeatherApp
             }
         }
 
-        void Handle_Toggled_Units(object sender, Xamarin.Forms.ToggledEventArgs e)
-        {
-
-            metricValues = e.Value;
-            if (metricValues == true)
-            {
-                unitsValue = "metric";
-                unitsMetImp.Text = "m/s";
-            }
-            else
-            {
-                unitsValue = "imperial";
-                unitsMetImp.Text = "mph";
-
-            }
-        }
-            void Handle_Toggled_Color(object sender, Xamarin.Forms.ToggledEventArgs e)
+        void Handle_Toggled_Color(object sender, Xamarin.Forms.ToggledEventArgs e)
         {
             darkColor = e.Value;
             if (darkColor == true)
@@ -100,7 +110,7 @@ namespace WeatherApp
         {
             string requestUri = endpoint;
             requestUri += $"?q={_cityEntry.Text}";
-            requestUri += "&units="+unitsValue; // units=metric / imperial
+            requestUri += "&units=" + unitsValue; // units =metric / imperial
             requestUri += $"&APPID={Constants.OpenWeatherMapAPIKey}";
             return requestUri;
         }

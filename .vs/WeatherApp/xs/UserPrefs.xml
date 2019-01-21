@@ -2,14 +2,29 @@
   <MonoDevelop.Ide.ItemProperties.WeatherApp.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Weather/WeatherApp/MainPage.xaml.cs">
     <Files>
-      <File FileName="Weather/WeatherApp/MainPage.xaml.cs" Line="73" Column="39" />
-      <File FileName="Weather/WeatherApp/MainPage.xaml" Line="40" Column="17" />
+      <File FileName="Weather/WeatherApp/MainPage.xaml.cs" Line="120" Column="1" />
+      <File FileName="Weather/WeatherApp/MainPage.xaml" Line="64" Column="15" />
       <File FileName="Weather/WeatherApp/obj/Debug/netstandard2.0/MainPage.xaml.g.cs" Line="1" Column="1" />
-      <File FileName="Weather/WeatherApp/WeatherData.cs" Line="1" Column="1" />
+      <File FileName="Weather/WeatherApp/WeatherData.cs" Line="93" Column="16" />
       <File FileName="Weather/WeatherApp/RestService.cs" Line="28" Column="18" />
-      <File FileName="Weather/WeatherApp/LongToDateTimeConverter.cs" Line="20" Column="10" />
-      <File FileName="Weather/WeatherApp.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="Weather/WeatherApp/LongToDateTimeConverter.cs" Line="14" Column="65" />
+      <File FileName="Weather/WeatherApp.iOS/Main.cs" Line="21" Column="1" />
+      <File FileName="Weather/WeatherApp/App.xaml" Line="5" Column="15" />
+      <File FileName="Weather/WeatherApp/App.xaml.cs" Line="32" Column="12" />
+      <File FileName="Weather/WeatherApp.Android/MainActivity.cs" Line="16" Column="10" />
+      <File FileName="Weather/WeatherApp.iOS/AppDelegate.cs" Line="32" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="WeatherApp" expanded="True">
+            <Node name="WeatherApp.UITest" expanded="True">
+              <Node name="Test Apps" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
