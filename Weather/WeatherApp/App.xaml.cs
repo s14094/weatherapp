@@ -11,7 +11,24 @@ namespace WeatherApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+
+            var content = new ContentPage
+            {
+                Title = "HelloWorld",
+                Content = new StackLayout
+                {
+                    VerticalOptions = LayoutOptions.Center,
+                    Children = {
+                    new Label {
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        Text = "Welcome to Xamarin Forms!",
+                        AutomationId = "HelloWorldLabel"
+                    },
+                }
+                }
+            };
+
+            MainPage = new MainPage(content);
         }
 
         protected override void OnStart()

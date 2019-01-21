@@ -12,7 +12,7 @@ namespace WeatherApp
         String unitsValue;
 
 
-        public MainPage()
+        public MainPage(ContentPage content)
         {
             InitializeComponent();
             _restService = new RestService();
