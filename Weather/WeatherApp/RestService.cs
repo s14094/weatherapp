@@ -6,6 +6,9 @@ using Newtonsoft.Json;
 
 namespace WeatherApp
 {
+
+    // class for sending request and returning api data
+
     public class RestService
     {
         HttpClient _client;

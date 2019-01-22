@@ -18,6 +18,8 @@ namespace WeatherApp
             _restService = new RestService();
         }
 
+
+        // funtion for button action to send request 
         async void OnGetWeatherButtonClicked(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(_cityEntry.Text))
@@ -27,6 +29,7 @@ namespace WeatherApp
             }
         }
 
+        // function to change units imperial / metric
         async void Handle_Toggled_UnitsAsync(object sender, Xamarin.Forms.ToggledEventArgs e)
         {
 
@@ -34,15 +37,15 @@ namespace WeatherApp
 
             if (metricValues == true)
             {
-                unitsValue = "metric";
-                unitsMetImp.Text = "m/s";
-                tempMetImp.Text = "C";
+                unitsValue = Constants.unitsValueMetric;
+                unitsMetImp.Text = Constants.unitsMetImpMpS;
+                tempMetImp.Text = Constants.tempMetImpC;
             }
             else
             {
-                unitsValue = "imperial";
-                unitsMetImp.Text = "mph";
-                tempMetImp.Text = "F";
+                unitsValue = Constants.unitsValueImperial;
+                unitsMetImp.Text = Constants.unitsMetImpMpH;
+                tempMetImp.Text = Constants.tempMetImpF;
             }
 
 
@@ -53,43 +56,46 @@ namespace WeatherApp
             }
         }
 
+        // function to change laguage
         void Handle_Toggled_Lang(object sender, Xamarin.Forms.ToggledEventArgs e)
         {
             langPolish = e.Value;
             if (langPolish == true)
             {
-                headerLabel.Text = "Szukaj po mieście";
-                cityLabel.Text = "Miasto:";
-                searchButton.Text = "Szukaj";
-                locationLabel.Text = "Lokalizacja";
-                temperatureLabel.Text = "Temperatura";
-                windSpeedLabel.Text = "Prędkość wiatru";
-                humidityLabel.Text = "Wilgotność";
-                visibilityLabel.Text = "Widoczność";
-                timeOfSunriseLabel.Text = "Czas wschodu";
-                timeOfSunsetLabel.Text = "Czas zachodu";
-                optLang.Text = "Język ENG/PL";
-                optUnits.Text = "Jednostki Imperialne/Metryczne";
-                optColor.Text = "Motyw Jasny/Ciemny";
+                headerLabel.Text = Constants.headerLabelPl;
+                cityLabel.Text = Constants.cityLabelPl;
+                searchButton.Text = Constants.searchButtonPl;
+                locationLabel.Text = Constants.locationLabelPl;
+                temperatureLabel.Text = Constants.temperatureLabelPl;
+                windSpeedLabel.Text = Constants.windSpeedLabelPl;
+                humidityLabel.Text = Constants.humidityLabelPl;
+                visibilityLabel.Text = Constants.visibilityLabelPl;
+                timeOfSunriseLabel.Text = Constants.timeOfSunriseLabelPl;
+                timeOfSunsetLabel.Text = Constants.timeOfSunsetLabelPl;
+                optLang.Text = Constants.optLangPl;
+                optUnits.Text = Constants.optUnitsPl;
+                optColor.Text = Constants.optColorPl;
             }
             else
             {
-                headerLabel.Text = "Search by City";
-                cityLabel.Text = "City:";
-                searchButton.Text = "Search";
-                locationLabel.Text = "Location";
-                temperatureLabel.Text = "Temperature";
-                windSpeedLabel.Text = "Wind Speed";
-                humidityLabel.Text = "Humidity";
-                visibilityLabel.Text = "Visibility";
-                timeOfSunriseLabel.Text = "Time of Sunrise";
-                timeOfSunsetLabel.Text = "Time of Sunset";
-                optLang.Text = "Language ENG/PL";
-                optUnits.Text = "Units Imperial/Metric";
-                optColor.Text = "Theme Light/Dark";
+                headerLabel.Text = Constants.headerLabelEng;
+                cityLabel.Text = Constants.cityLabelEng;
+                searchButton.Text = Constants.searchButtonEng;
+                locationLabel.Text = Constants.locationLabelEng;
+                temperatureLabel.Text = Constants.temperatureLabelEng;
+                windSpeedLabel.Text = Constants.windSpeedLabelEng;
+                humidityLabel.Text = Constants.humidityLabelEng;
+                visibilityLabel.Text = Constants.visibilityLabelEng;
+                timeOfSunriseLabel.Text = Constants.timeOfSunriseLabelEng;
+                timeOfSunsetLabel.Text = Constants.timeOfSunsetLabelEng;
+                optLang.Text = Constants.optLangEng;
+                optUnits.Text = Constants.optUnitsEng;
+                optColor.Text = Constants.optColorEng;
             }
         }
 
+
+        // function to change color theme
         void Handle_Toggled_Color(object sender, Xamarin.Forms.ToggledEventArgs e)
         {
             darkColor = e.Value;
@@ -106,6 +112,8 @@ namespace WeatherApp
 
         }
 
+
+        // funtion to generate proper request 
         string GenerateRequestUri(string endpoint)
         {
             string requestUri = endpoint;

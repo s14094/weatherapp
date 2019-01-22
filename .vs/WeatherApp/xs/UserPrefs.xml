@@ -1,20 +1,21 @@
 ﻿<Properties StartupConfiguration="{1DB00857-48CB-44C6-9149-3A420D86861B}|Default">
   <MonoDevelop.Ide.ItemProperties.WeatherApp.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Weather/WeatherApp.UITests/AppInitializer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Weather/WeatherApp/RestService.cs">
     <Files>
-      <File FileName="Weather/WeatherApp/MainPage.xaml.cs" Line="16" Column="10" />
-      <File FileName="Weather/WeatherApp/MainPage.xaml" Line="29" Column="37" />
+      <File FileName="Weather/WeatherApp/MainPage.xaml.cs" Line="22" Column="54" />
+      <File FileName="Weather/WeatherApp/MainPage.xaml" Line="28" Column="35" />
       <File FileName="Weather/WeatherApp/obj/Debug/netstandard2.0/MainPage.xaml.g.cs" Line="1" Column="1" />
       <File FileName="Weather/WeatherApp/WeatherData.cs" Line="1" Column="1" />
-      <File FileName="Weather/WeatherApp/RestService.cs" Line="1" Column="1" />
+      <File FileName="Weather/WeatherApp/RestService.cs" Line="18" Column="68" />
       <File FileName="Weather/WeatherApp/LongToDateTimeConverter.cs" Line="1" Column="1" />
       <File FileName="Weather/WeatherApp.iOS/Main.cs" Line="1" Column="1" />
       <File FileName="Weather/WeatherApp/App.xaml" Line="5" Column="15" />
-      <File FileName="Weather/WeatherApp/App.xaml.cs" Line="31" Column="33" />
+      <File FileName="Weather/WeatherApp/App.xaml.cs" Line="25" Column="32" />
       <File FileName="Weather/WeatherApp.Android/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="Weather/WeatherApp.iOS/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="Weather/WeatherApp.UITests/Tests.cs" Line="33" Column="10" />
-      <File FileName="Weather/WeatherApp.UITests/AppInitializer.cs" Line="43" Column="1" />
+      <File FileName="Weather/WeatherApp.iOS/AppDelegate.cs" Line="34" Column="1" />
+      <File FileName="Weather/WeatherApp.UITests/Tests.cs" Line="33" Column="96" />
+      <File FileName="Weather/WeatherApp.UITests/AppInitializer.cs" Line="39" Column="29" />
+      <File FileName="Weather/WeatherApp/Constants.cs" Line="9" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
@@ -23,10 +24,7 @@
             <Node name="WeatherApp.UITests" expanded="True">
               <Node name="Test Apps" expanded="True" />
               <Node name="WeatherApp" expanded="True">
-                <Node name="Tests(Android)" expanded="True" />
-                <Node name="Tests(iOS)" expanded="True">
-                  <Node name="AppLaunches" selected="True" />
-                </Node>
+                <Node name="Tests(iOS)" expanded="True" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -39,6 +37,10 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint enabled="false" file="/Users/mac/Documents/Weather/Weather/WeatherApp/MainPage.xaml" relfile="Weather/WeatherApp/MainPage.xaml" line="49" column="27" />
+      <Breakpoint file="/Users/mac/Documents/Weather/Weather/WeatherApp.UITests/Tests.cs" relfile="Weather/WeatherApp.UITests/Tests.cs" line="34" column="1" />
+      <Breakpoint file="/Users/mac/Documents/Weather/Weather/WeatherApp.UITests/Tests.cs" relfile="Weather/WeatherApp.UITests/Tests.cs" line="38" column="1" />
+      <Breakpoint file="/Users/mac/Documents/Weather/Weather/WeatherApp.UITests/Tests.cs" relfile="Weather/WeatherApp.UITests/Tests.cs" line="41" column="1" />
+      <Breakpoint file="/Users/mac/Documents/Weather/Weather/WeatherApp.UITests/Tests.cs" relfile="Weather/WeatherApp.UITests/Tests.cs" line="46" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
