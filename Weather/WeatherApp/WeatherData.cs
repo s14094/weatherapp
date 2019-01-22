@@ -2,6 +2,8 @@
 
 namespace WeatherApp
 {
+
+    // classes to parse data from json
     public class WeatherData
     {
         [JsonProperty("name")]

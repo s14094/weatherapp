@@ -134,6 +134,15 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.TestCloud.Agent/0.21.7": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        }
+      },
       "WeatherApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -280,6 +289,15 @@
         "build": {
           "build/Xamarin.Forms.props": {},
           "build/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.TestCloud.Agent/0.21.7": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
         }
       },
       "WeatherApp/1.0.0": {
@@ -430,6 +448,15 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.TestCloud.Agent/0.21.7": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        }
+      },
       "WeatherApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -576,6 +603,15 @@
         "build": {
           "build/Xamarin.Forms.props": {},
           "build/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.TestCloud.Agent/0.21.7": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
         }
       },
       "WeatherApp/1.0.0": {
@@ -769,6 +805,19 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.TestCloud.Agent/0.21.7": {
+      "sha512": "mubMu3vnMkY62KQ3u6dKLFBGHlf2iKt1qU+N7ptAqi+rKpC+Zcy4W1sH0HQdP6YtXuhAkQt1u8LHJMGOd2qkYA==",
+      "type": "package",
+      "path": "xamarin.testcloud.agent/0.21.7",
+      "files": [
+        ".signature.p7s",
+        "LICENSE",
+        "epl-v10.html",
+        "lib/Xamarin.iOS/Calabash.dll",
+        "xamarin.testcloud.agent.0.21.7.nupkg.sha512",
+        "xamarin.testcloud.agent.nuspec"
+      ]
+    },
     "WeatherApp/1.0.0": {
       "type": "project",
       "path": "../WeatherApp/WeatherApp.csproj",
@@ -778,7 +827,8 @@
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "WeatherApp >= 1.0.0",
-      "Xamarin.Forms >= 3.4.0.1008975"
+      "Xamarin.Forms >= 3.4.0.1008975",
+      "Xamarin.TestCloud.Agent >= 0.21.7"
     ]
   },
   "packageFolders": {
@@ -818,6 +868,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[3.4.0.1008975, )"
+          },
+          "Xamarin.TestCloud.Agent": {
+            "target": "Package",
+            "version": "[0.21.7, )"
           }
         }
       }

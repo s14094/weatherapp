@@ -25,13 +25,18 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
+<!-- header panel with input label           -->
+            
             <Label x:Name="headerLabel" Text="Search by City" Grid.ColumnSpan="3" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
-            <Label x:Name="cityLabel" Text="City:" Grid.Row="1" VerticalOptions="Center" Style="{StaticResource labelStyle}" TextColor="#C0C0C0" />
+            <Label AutomationId="cityLabel" x:Name="cityLabel" Text="City:" Grid.Row="1" VerticalOptions="Center" Style="{StaticResource labelStyle}" TextColor="#C0C0C0" />
             <Entry x:Name="_cityEntry" Grid.Row="1" Grid.Column="1" Margin="5,0" VerticalOptions="Center" BackgroundColor="DarkGray" TextColor="White" Text="Gdansk" />
             <Button x:Name="searchButton" Grid.Row="1" Grid.Column="2" Text="Search" BorderWidth="1" BorderColor="White" BackgroundColor="DarkGray" TextColor="White" Clicked="OnGetWeatherButtonClicked" />
         </Grid>
         <ScrollView>
             <StackLayout Padding="10">
+                
+<!-- main panel with data labels                -->
+                
                 <Label Text="Location" x:Name="locationLabel" Style="{StaticResource labelStyle}" />
                 <Label Text="{Binding Title}" Style="{StaticResource labelResultStyle}" />
                 <Label Text="Temperature" x:Name="temperatureLabel" Style="{StaticResource labelStyle}" />
@@ -52,6 +57,9 @@
                 <Label Text="{Binding Sys.Sunrise, Converter={StaticResource longToDateTimeConverter}}" Style="{StaticResource labelResultStyle}" />
                 <Label Text="Time of Sunset" x:Name="timeOfSunsetLabel" Style="{StaticResource labelStyle}" />
                 <Label Text="{Binding Sys.Sunset, Converter={StaticResource longToDateTimeConverter}}" Style="{StaticResource labelResultStyle}" />
+                
+<!-- option panel               -->
+                
                 <Label x:Name="optLang" Text="Language ENG/PL" Style="{StaticResource labelStyle}" />
                 <Switch HorizontalOptions="Start" Toggled="Handle_Toggled_Lang" />
                 <Label x:Name="optUnits" Text="Units Imperial/Metric" Style="{StaticResource labelStyle}" />

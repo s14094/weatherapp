@@ -4,6 +4,8 @@ using Xamarin.Forms;
 
 namespace WeatherApp
 {
+    // funtion to convert data to proper, readable string
+
     public class LongToDateTimeConverter : IValueConverter
     {
         DateTime _time = new DateTime(1970, 1, 1, 0, 0, 0, 0);
